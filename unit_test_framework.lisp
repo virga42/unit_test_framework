@@ -1,3 +1,8 @@
+;; Attribution-
+;; elements of this framework are from 
+;; Peter Seibel's book Practical Common Lisp
+;;
+
 (defmacro with-gensyms ((&rest names) &body body)
   `(let ,(loop for n in names collect `(,n (gensym)))
   ,@body))
